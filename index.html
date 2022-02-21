@@ -2,24 +2,28 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
         <link rel="stylesheet" href="index.css">
-        <title>Base64</title>
+        <title></title>
     </head>
     <body>
         <div class="buttonRow">
-            <input type="radio" name="type" class="selectBtn" value="base64">
-            <input type="radio" name="type" class="selectBtn" value="base64url">
+            <input type="radio" name="type" class="selectBtn" value="base64" checked> Base64
+            <input type="radio" name="type" class="selectBtn" value="base64url"> Base64URL
         </div>
         <div class="inputRow">
             <div class="inputCol">
-                <textarea></textarea>
+                <textarea id="inputStr"></textarea>
             </div>
-            <div class="inputCol"></div>           
+            <div class="inputCol">
+                <textarea></textarea>
+            </div>           
         </div>
         <div class="buttonRow">
-            <button class="encodeBtn"></button>
-            <button class="decodeBtn"></button>
+            <button class="encodeBtn" id="encodeBtn">Encode</button>
+            <button class="decodeBtn" id="decodeBtn">Decode</button>
         </div>            
     </body>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="base64Encode.js"></script>
+    <script type="text/javascript" src="base64Decode.js"></script>
 </html>
