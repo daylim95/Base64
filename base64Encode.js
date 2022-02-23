@@ -18,12 +18,9 @@ $("#base64Encode").on("click", function(){
     }
     
     console.log(binaryStr)
-    if(binaryStr.length()%6==2){
-
-    }else if(binaryStr.length()%6==4){
+    if(binaryStr.length()%24!=0){
 
     }else{
-
+        
     }
-
 })
