@@ -7,22 +7,14 @@
         <title></title>
     </head>
     <body>
-        <div class="buttonRow">
-            <input type="radio" name="type" class="selectBtn" value="base64" checked> Base64
-            <input type="radio" name="type" class="selectBtn" value="base64url"> Base64URL
-        </div>
-        <div class="inputRow">
-            <div class="inputCol">
-                <textarea id="inputStr"></textarea>
+       <div>
+           <div>
+               <textarea id="inputStr"></textarea>
             </div>
-            <div class="inputCol">
-                <textarea></textarea>
-            </div>           
-        </div>
-        <div class="buttonRow">
-            <button class="encodeBtn" id="encodeBtn">Encode</button>
-            <button class="decodeBtn" id="decodeBtn">Decode</button>
-        </div>            
+            <div>
+                <button id="base64Encode">base64Encode</button>
+            </div>
+       </div>
     </body>
     <script type="text/javascript" src="base64Encode.js"></script>
     <script type="text/javascript" src="base64Decode.js"></script>
