@@ -16,10 +16,35 @@ $("#base64Encode").on("click", function(){
         binaryStr += bin;
     }
     
-    console.log(binaryStr)
-    if(binaryStr.length()%24!=0){
-
-    }else{
-        
+    var binaryLength = binaryStr.length;
+    if(binaryLength%24!=0){
+        for(var l=0;l<(24-binaryLength%24);l++){
+            binaryStr += "0";
+        }
     }
+
 })
+
+
+// base64 인덱스를 ascii 로 변환
+function Base64Index(integer){
+    
+    if(integer<26){
+        // 'A~Z'
+        integer += 65;
+    }else if(integer<52){
+        // 'a~z'
+        integer += 71;
+    }else if(integer<62){
+        // '0~9'
+        integer -= 4;
+    }else if(integer==62){
+        // '+'
+        integer = 43;
+    }else if(integer==63){
+        // '/'
+        integer = 47;
+    }
+
+    return String.fromCharCode(integer);
+}
