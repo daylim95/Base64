@@ -23,6 +23,14 @@ $("#base64Encode").on("click", function(){
         }
     }
 
+    var binaryBlock = binaryStr.length/6;
+    var binaryArr = new Array();
+    for(var i=0;i<binaryBlock;i++){
+        binaryArr.push(binaryStr.substr(i*6,6));
+    }
+    console.log(binaryArr)
+    
+
 })
 
 
@@ -47,4 +55,10 @@ function Base64Index(integer){
     }
 
     return String.fromCharCode(integer);
+}
+
+function BinToDec(binary){
+    for(var i=0;i<binary.length;i++){
+        var bin = binary%10;
+    }
 }
