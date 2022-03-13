@@ -1,5 +1,4 @@
 $("#base64Decode").on("click", function(){
-
   var inputStr = $("#inputStr").val();
   var binaryStr = "";
   for(var j=0;j<asciiArr.length;j++){
@@ -64,4 +63,4 @@ function BinToDec(binary){
       idx *= 2
   }
   return decimal
-}
+} 
