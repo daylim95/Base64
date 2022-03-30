@@ -2,7 +2,7 @@ $("#base64Encode").on("click", function(){
 
     var inputStr = $("#inputStr").val()
     var binaryStr = ""
-    for(var j=0;j<asciiArr.length;j++){
+    for(var i=0;i<inputStr.length;i++){
         var bin =  inputStr.charCodeAt(i).toString(2)
         var zeros = 8-bin.length
         for(var k=0;k<zeros;k++){
@@ -25,6 +25,8 @@ $("#base64Encode").on("click", function(){
     }
 
     console.log(encodedString)
+    $("#outputStr").val(encodedString)
+    $("#type").html("base64Encode")
 })
 
 
